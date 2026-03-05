@@ -1,0 +1,1 @@
+<?php //student/index.php

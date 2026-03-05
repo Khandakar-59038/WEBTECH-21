@@ -1,0 +1,2 @@
+-- seed.sql — Test data for Student Course Hub
+-- To be completed by Musanna

@@ -1,0 +1,2 @@
+-- schema.sql — Full database schema for Student Course Hub
+-- To be completed by Musanna

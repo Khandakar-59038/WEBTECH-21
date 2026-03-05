@@ -1,0 +1,1 @@
+<?php //auth/logout.php
