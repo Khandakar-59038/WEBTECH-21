@@ -1,6 +1,7 @@
 <?php
 // includes/header.php — Shared HTML header for all student pages
 // CTEC2712N — Musanna Khandakar
+// Usage: require_once '../includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +13,8 @@
     <link rel="stylesheet" href="/student-course-hub/css/student.css">
 </head>
 <body>
-
-<!-- Skip to main content link for keyboard users (accessibility) -->
+<!-- Skip link: allows keyboard users to jump past navigation -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header class="site-header">
     <div class="header-inner">
         <a href="/student-course-hub/student/index.php" class="site-logo">
@@ -28,5 +27,4 @@
         </nav>
     </div>
 </header>
-
 <main id="main-content">
