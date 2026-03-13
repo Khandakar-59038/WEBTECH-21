@@ -1,1 +1,4 @@
-<?php //admin/programmes.php
+  session_start();
+  require_once '../includes/auth.php';
+  requireAdmin();
+min/programmes.php
