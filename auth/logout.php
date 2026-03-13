@@ -1,13 +1,14 @@
 <?php
-// auth/logout.php — Destroys admin session and redirects to login
+// auth/logout.php — Destroy session and log out
 // CTEC2712N — Musanna Khandakar
-
 session_start();
 
-// Destroy everything in the session
+// Clear all session data
 $_SESSION = [];
+
+// Destroy the session on the server
 session_destroy();
 
-// Redirect to login page
+// Send user back to login page
 header('Location: /student-course-hub/auth/login.php');
 exit;
