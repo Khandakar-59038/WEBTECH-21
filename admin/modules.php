@@ -5,11 +5,6 @@ session_start();
 require_once '../includes/db.php';
 require_once '../includes/helpers.php';
 
-function e($value) {
-    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
-}
-
-// Fetch all modules with leader name
 $stmt = $pdo->prepare(
     'SELECT m.ModuleID, m.ModuleName, m.Description, s.Name AS Leader
      FROM Modules m
@@ -24,7 +19,7 @@ $modules = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Modules — Admin</title>
+    <title>Manage Modules --- Admin</title>
     <link rel="stylesheet" href="/student-course-hub/css/main.css">
     <link rel="stylesheet" href="/student-course-hub/css/admin.css">
 </head>
@@ -32,4 +27,43 @@ $modules = $stmt->fetchAll();
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
-    <div class="header-inner"
+    <div class="header-inner">
+        <a href="/student-course-hub/admin/index.php" class="site-logo">SCH Admin</a>
+        <nav aria-label="Admin navigation"><ul class="nav-list">
+            <li><a href="programmes.php">Programmes</a></li>
+            <li><a href="modules.php">Modules</a></li>
+            <li><a href="students.php">Students</a></li>
+            <li><a href="/student-course-hub/auth/logout.php">Logout</a></li>
+        </ul></nav>
+    </div>
+</header>
+
+<main id="main-content" class="admin-main">
+<div class="admin-container">
+
+    <h1>Manage Modules</h1>
+    <p>Total modules: <?= count($modules) ?></p>
+
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Module Name</th>
+                <th>Leader</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($modules as $m): ?>
+            <tr>
+                <td><?= e($m['ModuleName']) ?></td>
+                <td><?= e($m['Leader']) ?></td>
+                <td><?= e($m['Description']) ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</div>
+</main>
+</body>
+</html>
