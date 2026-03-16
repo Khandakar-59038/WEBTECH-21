@@ -96,3 +96,4 @@ $pageTitle = 'Programmes --- Student Course Hub';
 <script src="/student-course-hub/js/filter.js"></script>
 </body>
 </html>
+
