@@ -188,5 +188,3 @@ $staff  = $pdo->query('SELECT * FROM Staff ORDER BY Name')->fetchAll();
 </main>
 </body>
 </html>
-
-
