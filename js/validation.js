@@ -19,3 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.addEventListener('blur', function () {
         validateEmail();
     });
+    // ── VALIDATE BOTH on form submit ──
+    form.addEventListener('submit', function (e) {
+        const nameOk  = validateName();
+        const emailOk = validateEmail();
+
+        if (!nameOk || !emailOk) {
+            e.preventDefault(); // Stop form submitting
+
+            // Move keyboard focus to first error field
+            if (!nameOk) {
+                nameInput.focus();
+            } else {
+                emailInput.focus();
+            }
+        }
+    });
