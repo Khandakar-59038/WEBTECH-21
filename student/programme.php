@@ -80,3 +80,30 @@ if (empty($_SESSION['csrf_token'])) {
     <h2>About This Programme</h2>
     <p><?= e($programme['Description']) ?></p>
 </section>
+<!-- Modules grouped by year -->
+<section class="modules-section">
+    <h2>Programme Modules</h2>
+
+    <?php if (empty($modulesByYear)): ?>
+        <p>No modules listed for this programme yet.</p>
+    <?php else: ?>
+
+        <?php foreach ($modulesByYear as $year => $modules): ?>
+        <section aria-label="Year <?= $year ?> modules">
+            <h3>Year <?= $year ?></h3>
+            <div class="modules-grid">
+                <?php foreach ($modules as $m): ?>
+                <div class="module-card">
+                    <h4><?= e($m['ModuleName']) ?></h4>
+                    <p class="module-leader">
+                        Leader: <?= e($m['Leader']) ?>
+                    </p>
+                    <p><?= e($m['Description']) ?></p>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        <?php endforeach; ?>
+
+    <?php endif; ?>
+</section>
