@@ -66,3 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return true;
         }
     }
+    // ── Show error message and mark field invalid ──
+    function showError(input, errorSpan, message) {
+        errorSpan.textContent = message;
+        input.setAttribute('aria-invalid', 'true');
+        input.style.borderColor = '#cc0000';
+    }
+
+    // ── Clear error message and mark field valid ──
+    function clearError(input, errorSpan) {
+        errorSpan.textContent = '';
+        input.setAttribute('aria-invalid', 'false');
+        input.style.borderColor = '#28a745';
+    }
+
+}); // end DOMContentLoaded
