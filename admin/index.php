@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<?php //admin/index.php   git push origin feature/yourname-yourfeature
+=======
 <?php
 // admin/index.php — Admin dashboard with live statistics
 // CTEC2712N — Musanna Khandakar
@@ -94,3 +97,4 @@ $totalModules = $stmt->fetch()['total'];
 </footer>
 </body>
 </html>
+>>>>>>> origin/main
