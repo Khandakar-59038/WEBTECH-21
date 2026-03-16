@@ -18,3 +18,11 @@ $stmt = $pdo->prepare(
      WHERE Email = :email AND ProgrammeID = :pid'
 );
 $stmt->execute([':email' => $email, ':pid' => $pid]);
+// Get the programme name to show in the confirmation message
+$stmt2 = $pdo->prepare(
+    'SELECT ProgrammeName FROM Programmes WHERE ProgrammeID = :pid'
+);
+$stmt2->execute([':pid' => $pid]);
+$prog     = $stmt2->fetch();
+$progName = $prog ? e($prog['ProgrammeName']) : 'this programme';
+?>
