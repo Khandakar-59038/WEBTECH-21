@@ -37,3 +37,30 @@ if (!empty($errors)) {
     $msg = urlencode(implode(' ', $errors));
     redirect('programme.php?id=' . $programmeId . '&error=' . $msg);
 }
+// Save to database
+// ON DUPLICATE KEY handles the case where the same email registers twice
+// for the same programme --- it reactivates rather than creating a duplicate
+try {
+    $stmt = $pdo->prepare(
+        'INSERT INTO InterestedStudents
+         (ProgrammeID, StudentName, Email, IsActive)
+         VALUES (:pid, :name, :email, 1)
+         ON DUPLICATE KEY UPDATE
+         IsActive = 1,
+         StudentName = :name2,
+         RegisteredAt = CURRENT_TIMESTAMP'
+    );
+    $stmt->execute([
+        ':pid'   => $programmeId,
+        ':name'  => $name,
+        ':email' => $email,
+        ':name2' => $name,
+    ]);
+
+    redirect('programme.php?id=' . $programmeId . '&success=1');
+
+} catch (PDOException $e) {
+    error_log('Interest registration error: ' . $e->getMessage());
+    $msg = urlencode('Registration failed. Please try again.');
+    redirect('programme.php?id=' . $programmeId . '&error=' . $msg);
+}
