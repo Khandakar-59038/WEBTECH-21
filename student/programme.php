@@ -48,3 +48,8 @@ $modulesByYear = [];
 foreach ($rows as $row) {
     $modulesByYear[$row['Year']][] = $row;
 }
+// Generate CSRF token to protect the interest registration form
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
