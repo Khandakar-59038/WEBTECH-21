@@ -188,23 +188,5 @@ $staff  = $pdo->query('SELECT * FROM Staff ORDER BY Name')->fetchAll();
 </main>
 </body>
 </html>
-```
 
----
 
-## Step 3 — Test it in the browser
-
-Go to: `localhost/student-course-hub/admin/programmes.php`
-
-You should see the login page first (because `requireAdmin()` checks you're logged in). Log in, then you should see the table of 10 programmes.
-
----
-
-## Step 4 — Commit it
-
-Once it's working, run these commands in Command Prompt **one at a time**:
-```
-git branch
-git add .
-git commit -m "feat: Add admin programme management (add, delete, publish)"
-git push origin feature/redoy-admin-panel
