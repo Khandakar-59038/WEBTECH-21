@@ -107,3 +107,75 @@ if (empty($_SESSION['csrf_token'])) {
 
     <?php endif; ?>
 </section>
+<!-- Interest registration form -->
+<section class="interest-section">
+    <h2>Register Your Interest</h2>
+    <p>Enter your details and we will keep you informed about this programme.</p>
+
+    <?php if (isset($_GET['success'])): ?>
+    <div class="success-message" role="alert">
+        Your interest has been registered. We will be in touch!
+    </div>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['error'])): ?>
+    <div class="error-message" role="alert">
+        <?= e(urldecode($_GET['error'])) ?>
+    </div>
+    <?php endif; ?>
+
+    <form method="POST"
+          action="register-interest.php"
+          id="interest-form"
+          novalidate>
+
+        <!-- Hidden: programme ID passed to processing page -->
+        <input type="hidden"
+               name="programme_id"
+               value="<?= (int)$programme['ProgrammeID'] ?>">
+
+        <!-- Hidden: CSRF token prevents fake form submissions -->
+        <input type="hidden"
+               name="csrf_token"
+               value="<?= e($_SESSION['csrf_token']) ?>">
+
+        <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text"
+                   id="student-name"
+                   name="student_name"
+                   required
+                   maxlength="100"
+                   autocomplete="name"
+                   aria-describedby="name-error">
+            <span id="name-error"
+                  class="field-error"
+                  role="alert"
+                  aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email"
+                   id="student-email"
+                   name="email"
+                   required
+                   maxlength="255"
+                   autocomplete="email"
+                   aria-describedby="email-error">
+            <span id="email-error"
+                  class="field-error"
+                  role="alert"
+                  aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn">Register Interest</button>
+    </form>
+</section>
+
+<p><a href="index.php">Back to all programmes</a></p>
+
+<?php require_once '../includes/footer.php'; ?>
+<script src="/student-course-hub/js/validation.js"></script>
+</body>
+</html>
