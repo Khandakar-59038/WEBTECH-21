@@ -25,3 +25,14 @@ $stmt->execute([':q' => $search, ':q2' => $search]);
 $results = $stmt->fetchAll();
 
 echo json_encode($results);
+<?php
+declare(strict_types=1);
+function add(int $a, int $b): int {
+    return $a + $b;
+}
+echo add("5", 3);
+?>
+
+
+
+

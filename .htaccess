@@ -1,2 +1,46 @@
 # .htaccess — Security rules for Student Course Hub
-# Full rules will be added by Musanna in the security implementation phase
+# CTEC2712N — Musanna Khandakar
+# This file tells Apache web server how to handle requests securely.
+
+# ── Stop directory browsing ──────────────────────────────────────────────
+# Without this, if someone visits /images/ in the browser they see all files.
+# With this, they get a 403 Forbidden error instead.
+Options -Indexes
+
+# ── Hide server information from attackers ───────────────────────────────
+ServerSignature Off
+
+# ── Block direct access to sensitive files ───────────────────────────────
+# Nobody should be able to open config.php or .sql files directly in browser.
+<FilesMatch "\.(sql|log|env|md|gitignore)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ── Block direct access to config.php ────────────────────────────────────
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# ── Security headers ─────────────────────────────────────────────────────
+# These headers tell the browser to apply extra protections.
+<IfModule mod_headers.c>
+    # Prevent the site being loaded inside an iframe (clickjacking protection)
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Prevent browser guessing file types (MIME sniffing attack protection)
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Prevent browser sending referrer info to other sites
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Force HTTPS if the site runs on HTTPS
+    # Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+# ── Enable URL rewriting (optional — for clean URLs) ─────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+

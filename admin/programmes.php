@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 // admin/programmes.php --- Manage programmes (add, edit, delete, publish)
 // CTEC2712N --- Redoy
@@ -188,3 +189,9 @@ $staff  = $pdo->query('SELECT * FROM Staff ORDER BY Name')->fetchAll();
 </main>
 </body>
 </html>
+=======
+  session_start();
+  require_once '../includes/auth.php';
+  requireAdmin();
+min/programmes.php
+>>>>>>> origin/main

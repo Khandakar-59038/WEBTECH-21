@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 // admin/modules.php --- View all modules with their leaders
 // CTEC2712N --- Redoy
@@ -67,3 +68,9 @@ $modules = $stmt->fetchAll();
 </main>
 </body>
 </html>
+=======
+  session_start();
+  require_once '../includes/auth.php';
+  requireAdmin();
+in/modules.php
+>>>>>>> origin/main
