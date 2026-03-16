@@ -29,3 +29,22 @@ if (!$programme) {
     redirect('index.php');
 }
 
+// Fetch all modules for this programme, sorted by year then name
+$stmt2 = $pdo->prepare(
+    'SELECT pm.Year, m.ModuleName, m.Description, s.Name AS Leader
+     FROM ProgrammeModules pm
+     JOIN Modules m ON pm.ModuleID = m.ModuleID
+     JOIN Staff s ON m.ModuleLeaderID = s.StaffID
+     WHERE pm.ProgrammeID = :id
+     ORDER BY pm.Year ASC, m.ModuleName ASC'
+);
+$stmt2->execute([':id' => $id]);
+$rows = $stmt2->fetchAll();
+
+// Group modules by year:
+// $modulesByYear[1] = [all year 1 modules]
+// $modulesByYear[2] = [all year 2 modules] etc.
+$modulesByYear = [];
+foreach ($rows as $row) {
+    $modulesByYear[$row['Year']][] = $row;
+}
