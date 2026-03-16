@@ -53,3 +53,30 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= e($programme['ProgrammeName']) ?> — Student Course Hub</title>
+    <link rel="stylesheet" href="/student-course-hub/css/main.css">
+    <link rel="stylesheet" href="/student-course-hub/css/student.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<?php require_once '../includes/header.php'; ?>
+
+<!-- Hero section with programme name and level -->
+<div class="programme-hero">
+    <h1><?= e($programme['ProgrammeName']) ?></h1>
+    <span class="badge"><?= e($programme['LevelName']) ?></span>
+    <p class="programme-leader">
+        Programme Leader: <?= e($programme['LeaderName']) ?>
+    </p>
+</div>
+
+<!-- About description -->
+<section class="programme-description">
+    <h2>About This Programme</h2>
+    <p><?= e($programme['Description']) ?></p>
+</section>
