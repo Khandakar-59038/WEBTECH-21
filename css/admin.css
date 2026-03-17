@@ -1,1 +1,212 @@
-/*css/admin.css-global styles*/
+/* css/admin.css — Admin panel styles */
+/* CTEC2712N — Musanna Khandakar */
+
+/* ── Admin main layout ── */
+.admin-main {
+    background: #f0f4f8;
+    min-height: calc(100vh - 120px);
+    padding: 2rem 1.5rem;
+}
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.admin-container h1 {
+    color: #1F4E79;
+    margin-bottom: 0.3rem;
+    font-size: 1.9rem;
+}
+.admin-container h2 {
+    color: #2E75B6;
+    margin: 1.8rem 0 0.8rem;
+    font-size: 1.25rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #D6E4F0;
+}
+
+/* ── Stats grid on dashboard ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #dde3ea;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.stat-card h2 {
+    font-size: 2.4rem;
+    color: #2E75B6;
+    border: none;
+    margin: 0 0 0.3rem;
+    padding: 0;
+}
+.stat-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ── Quick links section ── */
+.quick-links {
+    background: #f8f9fb;
+    border: 1px solid #dde3ea;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+.quick-links h2 {
+    width: 100%;
+    margin: 0 0 0.5rem;
+    border: none;
+    padding: 0;
+}
+
+/* ── Admin table ── */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    font-size: 0.93rem;
+}
+.admin-table th {
+    background: #1F4E79;
+    color: #ffffff;
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    font-weight: bold;
+}
+.admin-table td {
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid #e8ecf0;
+    vertical-align: top;
+}
+.admin-table tr:nth-child(even) td {
+    background: #f5f8fc;
+}
+.admin-table tr:hover td {
+    background: #eef4fb;
+}
+
+/* ── Published / Draft badges ── */
+.badge-published {
+    background: #1E6B3C;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.badge-draft {
+    background: #7B3F00;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* ── Admin form styles ── */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2E75B6;
+    outline: 3px solid #D6E4F0;
+    outline-offset: 1px;
+}
+
+/* ── Success and error messages ── */
+.success-message {
+    background: #d4edda;
+    border: 1px solid #28a745;
+    border-left: 5px solid #28a745;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    color: #155724;
+    font-weight: bold;
+}
+.error-message {
+    background: #f8d7da;
+    border: 1px solid #dc3545;
+    border-left: 5px solid #dc3545;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    color: #721c24;
+    font-weight: bold;
+}
+
+/* ── Login page ── */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+.login-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+.login-box h1 {
+    color: #1F4E79;
+    margin-bottom: 0.3rem;
+    font-size: 1.7rem;
+}
+.login-box p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .admin-container { padding: 1rem; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .admin-table { font-size: 0.82rem; }
+    .quick-links { flex-direction: column; }
+}
+@media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+}
+
