@@ -110,4 +110,8 @@ INSERT INTO InterestedStudents (ProgrammeID, StudentName, Email) VALUES
 (1, 'John Doe',    'john.doe@example.com'),
 (4, 'Jane Smith',  'jane.smith@example.com'),
 (6, 'Alex Brown',  'alex.brown@example.com'),
+<<<<<<< HEAD
 (9, 'Priya Patel', 'priya.patel@example.com');
+=======
+(9, 'Priya Patel', 'priya.patel@example.com');
+>>>>>>> origin/main
