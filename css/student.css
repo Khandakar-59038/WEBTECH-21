@@ -1,1 +1,246 @@
-/*css/student.css-global styles*/
+/* css/student.css --- Student-facing page styles */
+/* CTEC2712N --- Prodip */
+
+/* ── Search bar ── */
+.search-bar {
+    max-width: 600px;
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+}
+.search-bar label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #333333;
+}
+.search-bar input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.search-bar input:focus {
+    border-color: #2E75B6;
+    outline: 3px solid #D6E4F0;
+    outline-offset: 2px;
+}
+
+/* ── Filter buttons ── */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+.filter-btn {
+    padding: 0.5rem 1.4rem;
+    border: 2px solid #2E75B6;
+    background: #ffffff;
+    color: #2E75B6;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: background 0.2s, color 0.2s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+    background: #1F4E79;
+    color: #ffffff;
+    border-color: #1F4E79;
+}
+.filter-btn:focus {
+    outline: 3px solid #2E75B6;
+    outline-offset: 2px;
+}
+
+/* ── Programme grid --- auto-fills columns based on screen width ── */
+.programme-grid {
+    display: grid;
+    /*
+     minmax(280px, 1fr):
+     minimum card width 280px, expand to fill remaining space.
+     auto-fill creates as many columns as fit.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 2rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ── Programme card ── */
+.programme-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.programme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.programme-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-no-image {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #1F4E79, #2E75B6);
+}
+.programme-card h2 {
+    font-size: 1.1rem;
+    color: #1F4E79;
+    padding: 1rem 1rem 0.3rem;
+    margin: 0;
+}
+.programme-card .badge {
+    display: inline-block;
+    background: #2E75B6;
+    color: #ffffff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin: 0 1rem 0.5rem;
+}
+.programme-card p {
+    padding: 0 1rem;
+    color: #555555;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    flex-grow: 1; /* pushes the button to the bottom of every card */
+}
+.programme-card .btn {
+    margin: 1rem;
+    display: block;
+    text-align: center;
+}
+
+/* ── Hidden class added by filter.js ── */
+.programme-card.hidden {
+    display: none;
+}
+
+/* ── No results message ── */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #888888;
+    font-size: 1.1rem;
+}
+
+/* ── Programme detail page ── */
+.programme-hero {
+    background: #1F4E79;
+    color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.programme-hero h1 { color: #ffffff; margin: 0 0 0.5rem; }
+.programme-leader { margin: 0.5rem 0 0; opacity: 0.85; }
+
+.programme-description,
+.modules-section,
+.interest-section {
+    max-width: 960px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1.5rem;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.module-card {
+    background: #f8f9fb;
+    border: 1px solid #dde3ea;
+    border-radius: 6px;
+    padding: 1rem;
+}
+.module-card h4 {
+    margin: 0 0 0.3rem;
+    color: #1F4E79;
+    font-size: 0.95rem;
+}
+.module-leader {
+    font-size: 0.82rem;
+    color: #666;
+    margin: 0 0 0.4rem;
+}
+
+/* ── Form styles ── */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2E75B6;
+    outline: 3px solid #D6E4F0;
+}
+.field-error {
+    color: #cc0000;
+    font-size: 0.88rem;
+    display: block;
+    margin-top: 0.3rem;
+}
+.success-message {
+    background: #d4edda;
+    border: 1px solid #28a745;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    color: #155724;
+}
+.error-message {
+    background: #f8d7da;
+    border: 1px solid #dc3545;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    color: #721c24;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .programme-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
