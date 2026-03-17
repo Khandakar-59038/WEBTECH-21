@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+<<<<<<<
+ HEAD
 -- schema.sql — Full database schema for Student Course Hub
 -- CTEC2712N — Musanna Khandakar
 
