@@ -5,10 +5,6 @@ session_start();
 require_once '../includes/db.php';
 require_once '../includes/helpers.php';
 
-function e($value) {
-    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
-}
-
 // Handle CSV export
 if (isset($_GET['export'])) {
     $pid = filter_input(INPUT_GET, 'export', FILTER_VALIDATE_INT) ?: 0;
