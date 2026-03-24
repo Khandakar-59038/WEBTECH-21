@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0A3C"/>
+      <stop offset="100%" style="stop-color:#4A1A8C"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#AB47BC;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="340" cy="30" r="80" fill="#AB47BC" opacity="0.08"/>
+  <circle cx="60" cy="170" r="60" fill="#AB47BC" opacity="0.06"/>
+  <circle cx="200" cy="100" r="120" fill="url(#glow)"/>
+  <!-- Grid dots pattern -->
+  <circle cx="20" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="20" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="50" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="80" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="110" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="140" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="170" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="200" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="230" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="260" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="290" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="320" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="350" cy="190" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="10" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="70" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="100" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="130" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="160" r="1.5" fill="white" opacity="0.08"/><circle cx="380" cy="190" r="1.5" fill="white" opacity="0.08"/>
+  <!-- Icon -->
+  <g transform="translate(140,25)" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+  <circle cx="60" cy="60" r="25"/>
+  <circle cx="60" cy="60" r="8" fill="white" opacity="0.3"/>
+  <line x1="60" y1="5" x2="60" y2="30"/>
+  <line x1="60" y1="90" x2="60" y2="115"/>
+  <line x1="5" y1="60" x2="30" y2="60"/>
+  <line x1="90" y1="60" x2="115" y2="60"/>
+  <line x1="22" y1="22" x2="42" y2="42"/>
+  <line x1="78" y1="78" x2="98" y2="98"/>
+  <line x1="98" y1="22" x2="78" y2="42"/>
+  <line x1="22" y1="98" x2="42" y2="78"/>
+</g>
+  <!-- Label -->
+  <text x="200" y="175" text-anchor="middle" font-family="system-ui,sans-serif" 
+        font-size="13" font-weight="600" fill="white" opacity="0.7">BSc Artificial Intelligence</text>
+</svg>
