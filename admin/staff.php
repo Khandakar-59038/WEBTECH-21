@@ -34,24 +34,20 @@ $staffList = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= e($pageTitle) ?></title>
 <link rel="stylesheet" href="/student-course-hub/css/main.css">
 <link rel="stylesheet" href="/student-course-hub/css/student.css">
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff — Student Course Hub Admin</title>
     <link rel="stylesheet" href="/student-course-hub/css/main.css">
     <link rel="stylesheet" href="/student-course-hub/css/admin.css">
->>>>>>> origin/main
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="site-header">
-<<<<<<< HEAD
 <div class="header-inner">
 <a href="/student-course-hub/student/index.php" class="site-logo">Student Course Hub</a>
 <nav aria-label="Main navigation">
@@ -125,7 +121,6 @@ echo e(substr($initials, 0, 2));
 </footer>
 </body>
 </html>
-=======
     <div class="header-inner">
         <a href="/student-course-hub/admin/index.php" class="site-logo">SCH Admin</a>
         <nav aria-label="Admin navigation">
@@ -170,4 +165,3 @@ echo e(substr($initials, 0, 2));
 </footer>
 </body>
 </html>
->>>>>>> origin/main
