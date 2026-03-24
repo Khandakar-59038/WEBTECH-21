@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // admin/students.php --- View interested students and export mailing list as CSV
 // CTEC2712N --- Redoy
@@ -133,9 +132,7 @@ $counts = $countStmt->fetchAll();
 </main>
 </body>
 </html>
-=======
   session_start();
   require_once '../includes/auth.php';
   requireAdmin();
 dmin/students.php
->>>>>>> origin/main
