@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php //admin/index.php   git push origin feature/yourname-yourfeature
 
 
