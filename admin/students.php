@@ -2,6 +2,8 @@
 // admin/students.php --- View interested students and export mailing list as CSV
 // CTEC2712N --- Redoy
 session_start();
+require_once '../includes/auth.php';
+requireAdmin();
 require_once '../includes/db.php';
 require_once '../includes/helpers.php';
 
@@ -128,7 +130,3 @@ $counts = $countStmt->fetchAll();
 </main>
 </body>
 </html>
-  session_start();
-  require_once '../includes/auth.php';
-  requireAdmin();
-dmin/students.php
