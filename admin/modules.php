@@ -2,6 +2,8 @@
 // admin/modules.php --- View all modules with their leaders
 // CTEC2712N --- Redoy
 session_start();
+require_once '../includes/auth.php';
+requireAdmin();
 require_once '../includes/db.php';
 require_once '../includes/helpers.php';
 

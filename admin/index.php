@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<?php //admin/index.php   git push origin feature/yourname-yourfeature
+<?php //admin/index.php
 
 
 // admin/index.php — Admin dashboard with live statistics
@@ -97,4 +96,3 @@ $totalModules = $stmt->fetch()['total'];
 </footer>
 </body>
 </html>
->>>>>>> origin/main

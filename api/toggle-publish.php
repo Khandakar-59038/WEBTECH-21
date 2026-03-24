@@ -2,6 +2,8 @@
 // api/toggle-publish.php --- Toggle programme published status
 // CTEC2712N --- Redoy
 session_start();
+require_once '../includes/auth.php';
+requireAdmin();
 require_once '../includes/db.php';
 
 $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
