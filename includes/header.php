@@ -23,6 +23,8 @@
         <nav aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="/student-course-hub/student/index.php">Programmes</a></li>
+<li><a href='/student-course-hub/student/staff.php'>Staff</a></li>
+
             </ul>
         </nav>
     </div>
