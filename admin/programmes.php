@@ -66,8 +66,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'edit') {
             SET ProgrammeName = :name,
             LevelID = :level,
             ProgrammeLeaderID = :leader,
-            Description = :desc,
-            UpdatedAt = NOW()
+            Description = :desc
             WHERE ProgrammeID = :id'
         );
         $stmt->execute([':name'=>$name,':level'=>$level,':leader'=>$leader,':desc'=>$desc,':id'=>$id]);
