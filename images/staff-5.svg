@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0392B"/>
+      <stop offset="100%" style="stop-color:#7B241C"/>
+    </linearGradient>
+    <clipPath id="circle5">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="url(#bg5)"/>
+
+  <!-- Decorative ring -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="white" stroke-width="1" opacity="0.15"/>
+
+  <g clip-path="url(#circle5)">
+    <!-- Clothing / shoulders -->
+    
+        <rect x="55" y="168" width="90" height="32" rx="0" fill="#C0392B"/>
+        <ellipse cx="100" cy="168" rx="22" ry="8" fill="#FDDBB4"/>
+        
+
+    <!-- Neck -->
+    <rect x="88" y="148" width="24" height="26" rx="8" fill="#FDDBB4"/>
+
+    <!-- Hair (behind face) -->
+    
+            <ellipse cx="100" cy="95" rx="36" ry="40" fill="#8B5E3C"/>
+            <ellipse cx="100" cy="58" rx="16" ry="16" fill="#8B5E3C"/>
+            <ellipse cx="100" cy="75" rx="28" ry="14" fill="#8B5E3C"/>
+            
+
+    <!-- Face -->
+    <ellipse cx="100" cy="112" rx="30" ry="34" fill="#FDDBB4"/>
+
+    <!-- Eyes -->
+    <ellipse cx="89" cy="105" rx="4" ry="4.5" fill="#2C1810"/>
+    <ellipse cx="111" cy="105" rx="4" ry="4.5" fill="#2C1810"/>
+    <ellipse cx="90" cy="104" rx="1.5" ry="1.5" fill="white"/>
+    <ellipse cx="112" cy="104" rx="1.5" ry="1.5" fill="white"/>
+
+    <!-- Eyebrows -->
+    <path d="M83 98 Q89 95 95 97" stroke="#2C1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M105 97 Q111 95 117 98" stroke="#2C1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M100 108 Q97 115 100 118 Q103 115 100 108" fill="#FDDBB4" stroke="#8B5E3C" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Smile -->
+    <path d="M91 124 Q100 130 109 124" stroke="#C0725A" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Glasses (every 3rd person) -->
+    
+  </g>
+
+  <!-- Name initial ring -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="white" stroke-width="0.5" opacity="0.2"/>
+</svg>

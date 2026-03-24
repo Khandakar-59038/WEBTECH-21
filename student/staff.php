@@ -70,9 +70,19 @@ $colours = ['blue', 'green', 'purple', 'teal', 'orange', 'red'];
             $colour = $colours[$i % count($colours)];
             ?>
 
-            <div class="staff-avatar avatar-<?= $colour ?>" aria-hidden="true">
-                <?= e($initials) ?>
-            </div>
+          <?php
+$imgFile = 'staff-' . (int)$staff['StaffID'] . '.svg';
+$imgPath = $_SERVER['DOCUMENT_ROOT'] . '/student-course-hub/images/' . $imgFile;
+?>
+<?php if (file_exists($imgPath)): ?>
+    <img src="/student-course-hub/images/<?= e($imgFile) ?>"
+         alt="Portrait of <?= e($staff['Name']) ?>"
+         class="staff-photo">
+<?php else: ?>
+    <div class="staff-avatar avatar-<?= $colour ?>" aria-hidden="true">
+        <?= e($initials) ?>
+    </div>
+<?php endif; ?>
 
             <div class="staff-info">
                 <h2 class="staff-name"><?= e($staff['Name']) ?></h2>
