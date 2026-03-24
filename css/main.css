@@ -295,7 +295,6 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     height: 56px;
     min-width: 56px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
     color: var(--white);
     display: flex;
     align-items: center;
@@ -304,6 +303,13 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
+.avatar-blue   { background: linear-gradient(135deg, #1A5FA8, #0F2D52); }
+.avatar-green  { background: linear-gradient(135deg, #1E6B3C, #0A3320); }
+.avatar-purple { background: linear-gradient(135deg, #6A0DAD, #3A0070); }
+.avatar-teal   { background: linear-gradient(135deg, #00796B, #004D40); }
+.avatar-orange { background: linear-gradient(135deg, #E65100, #BF360C); }
+.avatar-red    { background: linear-gradient(135deg, #C0392B, #7B241C); }
+
 .staff-info  { flex: 1; min-width: 0; }
 .staff-name  {
     font-size: 1.05rem;
