@@ -1,25 +1,6 @@
 <?php
-// student/staff.php --- Staff profile page
-// CTEC2712N --- shows programme leaders and module leaders
-session_start();
-require_once '../includes/db.php';
-require_once '../includes/helpers.php';
-
-// Fetch all staff with their programmes and modules
-$stmt = $pdo->prepare(
-    'SELECT s.StaffID, s.Name,
-    GROUP_CONCAT(DISTINCT p.ProgrammeName ORDER BY p.ProgrammeName SEPARATOR "||") AS Programmes,
-    GROUP_CONCAT(DISTINCT m.ModuleName ORDER BY m.ModuleName SEPARATOR "||") AS Modules
-    FROM Staff s
-    LEFT JOIN Programmes p ON p.ProgrammeLeaderID = s.StaffID AND p.IsPublished = 1
-    LEFT JOIN Modules m ON m.ModuleLeaderID = s.StaffID
-    GROUP BY s.StaffID
-    ORDER BY s.Name'
-);
-$stmt->execute();
-$staffList = $stmt->fetchAll();
-
-$pageTitle = 'Our Staff --- Student Course Hub';
+// admin/staff.php --- View all staff members
+// CTEC2712N --- Redoy
 session_start();
 require_once '../includes/auth.php';
 requireAdmin();
@@ -34,11 +15,13 @@ $staffList = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= e($pageTitle) ?></title>
 <link rel="stylesheet" href="/student-course-hub/css/main.css">
 <link rel="stylesheet" href="/student-course-hub/css/student.css">
+=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff — Student Course Hub Admin</title>
@@ -48,6 +31,7 @@ $staffList = $stmt->fetchAll();
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="site-header">
+<<<<<<< HEAD
 <div class="header-inner">
 <a href="/student-course-hub/student/index.php" class="site-logo">Student Course Hub</a>
 <nav aria-label="Main navigation">
@@ -121,6 +105,7 @@ echo e(substr($initials, 0, 2));
 </footer>
 </body>
 </html>
+=======
     <div class="header-inner">
         <a href="/student-course-hub/admin/index.php" class="site-logo">SCH Admin</a>
         <nav aria-label="Admin navigation">
