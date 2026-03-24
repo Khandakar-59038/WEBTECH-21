@@ -391,6 +391,23 @@
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
+.interest-section .form-group label {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+.interest-section .form-group input {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  color: var(--white);
+}
+.interest-section .form-group input::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+.interest-section .form-group input:focus {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.15);
+  outline: none;
+}
 .interest-section p {
   color: rgba(255,255,255,0.75);
   margin-bottom: 1.5rem;
