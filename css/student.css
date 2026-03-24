@@ -477,19 +477,4 @@
 @media (max-width: 480px) {
   .programme-grid { grid-template-columns: 1fr; }
 }
-```
 
-**Then run:**
-```
-git add .
-git commit -m "style: Add student CSS with card animations and detail page"
-git push origin main
-```
-
----
-
-## PART 5 — SVG Images
-
-The document says the SVG files come as a separate package. Once you have them, copy all 17 files into:
-```
-C:\xampp\htdocs\student-course-hub\images\
